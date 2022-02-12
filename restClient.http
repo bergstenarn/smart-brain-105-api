@@ -1,0 +1,152 @@
+
+POST http://localhost:3000/signin
+Content-Type: application/json
+
+{
+  "email": "ann@hmail.com",
+  "password": "apples"
+}
+
+###
+
+POST http://localhost:3000/signin
+Content-Type: application/json
+
+{
+  "email": "anne@hmail.com",
+  "password": "apples"
+}
+
+###
+
+POST http://localhost:3000/signin
+Content-Type: application/json
+
+{
+  "email": "john@hmail.com",
+  "password": "cookies"
+}
+
+###
+
+POST http://localhost:3000/signin
+Content-Type: application/json
+
+{
+  "email": "john2@hmail.com",
+  "password": "cookies"
+}
+
+###
+
+POST http://localhost:3000/signin
+Content-Type: application/json
+
+{
+  "email": "sally@hmail.com",
+  "password": "123"
+}
+
+###
+
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "email": "ann@hmail.com",
+  "password": "apples",
+  "name": "Ann"
+}
+
+###
+
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "email": "anne@hmail.com",
+  "password": "apples",
+  "name": "Anne"
+}
+
+###
+
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "email": "john@hmail.com",
+  "password": "cookies",
+  "name": "John"
+}
+
+###
+
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "email": "john2@hmail.com",
+  "password": "cookies",
+  "name": "John2"
+}
+
+###
+
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "email": "john102@hmail.com",
+  "password": "cookies",
+  "name": "John102"
+}
+
+###
+
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "email": "sally@hmail.com",
+  "password": "123",
+  "name": "Sally"
+}
+
+###
+
+GET http://localhost:3000/
+
+###
+
+GET http://localhost:3000/profile/123
+
+###
+
+GET http://localhost:3000/profile/124
+
+###
+
+GET http://localhost:3000/profile/125
+
+###
+
+GET http://localhost:3000/profile/10
+
+###
+
+PUT http://localhost:3000/image
+Content-Type: application/json
+
+{
+  "id": "123"
+}
+
+###
+
+PUT http://localhost:3000/image
+Content-Type: application/json
+
+{
+  "id": "1"
+}
