@@ -13,11 +13,8 @@ const DB_PASSWORD = process.env.DB_PASSWORD || "dummy_db_password";
 const db = knex({
   client: "pg",
   connection: {
-    host: "postgresql-aerodynamic-52115",
-    // port: 5432,
-    user: DB_USER,
-    password: DB_PASSWORD,
-    database: "smart-brain-105-db",
+    host: process.env.DATABASE_URL,
+    ssl: true,
   },
 });
 
