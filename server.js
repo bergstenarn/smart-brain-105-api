@@ -13,7 +13,7 @@ const DB_PASSWORD = process.env.DB_PASSWORD || "dummy_db_password";
 const db = knex({
   client: "pg",
   connection: {
-    host: process.env.DATABASE_URL,
+    connectionString: process.env.DATABASE_URL,
     ssl: true,
   },
 });
