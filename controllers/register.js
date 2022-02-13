@@ -28,6 +28,10 @@ const handleRegister = (req, res, db, bcrypt) => {
           )
           .into("users")
           .then((users) => {
+            res.headers.set(
+              "Access-Control-Allow-Origin",
+              "https://smart-brain-105-web.herokuapp.com"
+            );
             res.json(users[0]);
           })
           .catch((err) => res.status(400).json("Unable to register"));
