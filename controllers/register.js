@@ -1,4 +1,6 @@
 const handleRegister = (req, res, db, bcrypt) => {
+  console.log("handleRegister");
+
   const { email, name, password } = req.body;
 
   if (!email || !name || !password) {
