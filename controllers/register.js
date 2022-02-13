@@ -1,6 +1,4 @@
 const handleRegister = (req, res, db, bcrypt) => {
-  console.log("handleRegister 1");
-
   const { email, name, password } = req.body;
 
   if (!email || !name || !password) {
@@ -8,9 +6,7 @@ const handleRegister = (req, res, db, bcrypt) => {
   }
 
   const hash = bcrypt.hashSync(password);
-  console.log("handleRegister 2");
   db.transaction((trx) => {
-    console.log("handleRegister 3");
     trx
       .insert(
         {
@@ -21,7 +17,6 @@ const handleRegister = (req, res, db, bcrypt) => {
       )
       .into("login")
       .then((emails) => {
-        console.log("handleRegister 4");
         trx
           .insert(
             {
@@ -33,7 +28,6 @@ const handleRegister = (req, res, db, bcrypt) => {
           )
           .into("users")
           .then((users) => {
-            console.log("handleRegister 5");
             res.json(users[0]);
           })
           .catch((err) => res.status(400).json("Unable to register"));
